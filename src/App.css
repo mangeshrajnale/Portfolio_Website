@@ -1,38 +1,249 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+}
+.logo{
+    display: flex;
+}
+.container{
+    max-width: 80%;
+    margin: auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ---------------header-------------- */
+header{
+    padding: 20px 0;
+}
+header ul{
+    display: inline-block;
+}
+header ul li{
+    display: inline-block;
+    margin-left: 30px;
+}
+header ul li a{
+    font-weight: 500;
+    transition: 0.5s;
+}
+header ul li a:hover{
+    font-weight: 500;
+    color: #38d16a;
+}
+.HeaderIcon{
+    margin-left: 20px;
+    transition: 0.5s;
+}
+.navbar-items-icon{
+    color: #000;
+    display: none;
+}
+.header.active{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 28px 0 rgba(0 0 0 /6%);
+    width: 100%;
+    z-index: 10;
+}
+@media screen and (max-width:768px) {
+    header.icon{
+        display: none;
+    }
+    .nav-links{
+        display: none;
+    }
+    .nav-links-sidebar{
+        position: absolute;
+        display: block;
+        background-color: #fff;
+        left: 50px;
+        top: 75px;
+        transition: 0.5s;
+        width: 100%;
+        height: 30vh;
+        z-index: 5;
+    }
+    .nav-links-sidebar{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .header ul li{
+        margin-bottom: 30px;
+    }
+    .navbar-items-icon{
+        display: block;
+        position: absolute;
+        right: 30px;
+        color: #000;
+        border: 1px solid #000;
+        padding: 5px 10px;
+    }
+}
+/* ---------------header-------------- */
+/* ----------------------Home-------------- */
+.left,.right{
+    width: 50%;
+    position: relative;
+}
+.flex{
+    display: flex;
+}
+.topMargin{
+    margin-left: 12px;
+    margin-top: 80px;
+}
+.home{
+    height: 90vh;
+}
+.home .img{
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    
+}
+.home img{
+    padding-top: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    transform: scale(1.1);
+}
+.home h1{
+    font-size: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.socialIcon i{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 35px;
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.socialIcon i:hover{
+    color: #fff;
 }
-
-.App-link {
-  color: #61dafb;
+.facebook{
+    color:#4267b2;
+    border: 1px solid #4267b2;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.facebook:hover{
+    background-color: #4267b2;
 }
+.instagram{
+    color: #d138a3;
+    border: 1px solid #d138a3;
+}
+.instagram:hover{
+    background-color: #d138a3;
+}
+.twitter{
+    color: #4267b2;
+    border: 1px solid #4267b2;
+}
+.twitter:hover{
+    background-color: #4267b2;
+}
+.youtube{
+    color: #ce1a1a;
+    border: 1px solid #ce1a1a;
+}
+.youtube:hover{
+    background-color: #ce1a1a;
+}
+.pinterest{
+    color: #21b5cf;
+    border: 1px solid #21b5cf;
+}
+.pinterest:hover{
+    background-color: #21b5cf;
+}
+.dribbble{
+    color: #ee72a2;
+    border: 1px solid #ee72a2;
+}
+.dribbble:hover{
+    background-color: #ee72a2;
+}
+button{
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.primary-btn{
+     padding: 15px 40px;
+     background: #38d16a;
+}
+.primary-btn:hover{
+    background-color: #f54ea2;
+    box-shadow: 0 13px 37px 0 rgb(245 78 162 / 25%);
+}
+.home .right{
+    margin-top: 15%;
+}
+.home .socialIcon{
+    margin: 30px 0;
+}
+.home p{
+    margin-bottom: 20px;
+}
+p{
+    color: #6185a5;
+    line-height: 30px;
+}
+/* ----------------------Home-------------- */
+/* ------------------Branding----------------- */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px; 
+}
+.branding{
+    background-color: #08071c;
+    color: #fff;
+    margin-top: 35px;
+    padding: 80px 0;
+}
+.branding h1{
+    font-size: 40px;
+    color: #38d16a;
+    margin-right: 20px;
+}
+.branding h2{
+    font-weight: 500;
+    font-size: 22px;
+    margin: 10px 0 20px 0;
+}
+.branding p{
+    color: #fff;
+    opacity: 0.7s;
+}
+/* ------------------Branding----------------- */
